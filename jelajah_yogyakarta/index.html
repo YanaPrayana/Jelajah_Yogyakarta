@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jelajah Yogyakarta</title>
+  <!-- CSS Bersama (WAJIB di semua halaman) -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ======== NAVBAR (sama di semua halaman) ======== -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">Jelajah <span>Yogyakarta</span></a>
+
+    <div class="navbar-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="navbar-menu" id="navMenu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="wisata.html">Wisata</a></li>
+      <li><a href="budaya.html">Budaya</a></li>
+      <li><a href="open-trip.html">Open Trip</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="login.html" class="btn-login">Login</a></li>
+    </ul>
+  </nav>
+  <!-- ======== END NAVBAR ======== -->
+
+
+  <!-- ======== HERO SECTION ======== -->
+  <section class="hero">
+    <h1>Jelajah Yogyakarta</h1>
+    <p>Temukan keindahan wisata, kekayaan budaya, dan pengalaman open trip terbaik di Daerah Istimewa Yogyakarta.</p>
+    <a href="wisata.html" class="btn btn-primary">Mulai Jelajah</a>
+  </section>
+  <!-- ======== END HERO ======== -->
+
+
+  <!-- ======== KONTEN UTAMA ======== -->
+  <main>
+
+    <!-- Contoh Section Wisata Populer -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Wisata Populer</h2>
+        <p class="section-subtitle">Destinasi terbaik yang wajib kamu kunjungi di Yogyakarta</p>
+
+        <div class="grid-3">
+
+          <!-- Contoh Card Wisata -->
+          <div class="card">
+            <img src="assets-gambar/prambanan.jpg" alt="Candi Prambanan" class="card-img" />
+            <div class="card-body">
+              <span class="card-badge">Sejarah</span>
+              <h3 class="card-title">Candi Prambanan</h3>
+              <p class="card-text">Kompleks candi Hindu terbesar di Indonesia yang memukau dengan arsitekturnya.</p>
+              <a href="wisata-detail.html" class="btn btn-primary">Lihat Detail</a>
+            </div>
+          </div>
+
+          <!-- Tambahkan card lain di sini -->
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- ======== END KONTEN ======== -->
+
+
+  <!-- ======== FOOTER (sama di semua halaman) ======== -->
+  <footer class="footer">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <h3>Jelajah Yogyakarta</h3>
+        <p>Platform wisata, budaya, dan open trip terbaik di Daerah Istimewa Yogyakarta. Temukan pengalaman tak terlupakan bersama kami.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="wisata.html">Wisata</a></li>
+          <li><a href="budaya.html">Budaya</a></li>
+          <li><a href="open-trip.html">Open Trip</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Informasi</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Jelajah Yogyakarta. Final Project Pemrograman Web.</p>
+    </div>
+  </footer>
+  <!-- ======== END FOOTER ======== -->
+
+
+  <!-- JS Bersama -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
