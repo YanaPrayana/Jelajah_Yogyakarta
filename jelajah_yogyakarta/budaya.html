@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jelajah Budaya Yogyakarta</title>
+    <link rel="stylesheet" href="css/budaya.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- KIRI: Logo -->
+      <div class="navbar-logo">
+        <div class="logo-icon">🏛</div>
+        <div class="logo-text">
+          <span class="logo-nama">Budaya</span>
+          <span class="logo-tagline">Open Trip Yogyakarta</span>
+        </div>
+      </div>
+
+      <!-- TENGAH: Menu -->
+      <ul class="navbar-menu" id="navMenu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="open-trip.html">Open Trip</a></li>
+        <li><a href="wisata.html">Destinasi</a></li>
+        <li><a href="budaya.html" class="active">Budaya</a></li>
+        <li><a href="about.html">Tentang Kami</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+
+      <!-- KANAN: Tombol -->
+      <a href="booking.html" class="btn-booking"> 📅 Booking Open Trip </a>
+
+      <!-- Mobile Toggle -->
+      <div class="navbar-toggle" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-budaya">
+      <!-- Overlay gelap supaya teks terbaca -->
+      <div class="hero-overlay"></div>
+
+      <!-- Konten teks -->
+      <div class="hero-konten">
+        <span class="hero-label">✦ Sugeng Rawuh</span>
+        <h1>Selamat Datang di <br /><span>Jiwa Budaya Yogyakarta</span></h1>
+        <p>
+          Temukan cerita, nilai, dan warisan luhur yang hidup dalam setiap
+          tradisi. Yogyakarta bukan hanya tempat, tapi juga rasa dan pengalaman
+          yang mendalam.
+        </p>
+        <a href="#filter-kategori" class="btn-jelajahi">Jelajahi Budaya ↓</a>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/budaya.js"></script>
+  </body>
+</html>

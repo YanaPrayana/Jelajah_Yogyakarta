@@ -1,24 +1,15 @@
-// ================================================
-// JELAJAH YOGYAKARTA - main.js (BERSAMA)
-// ================================================
-
-// --- Hamburger Menu (Mobile) ---
+// Hamburger Menu
 function toggleMenu() {
   const menu = document.getElementById("navMenu");
   menu.classList.toggle("open");
 }
 
-// --- Set Active Nav Link sesuai halaman saat ini ---
-document.addEventListener("DOMContentLoaded", function () {
-  const currentPage = window.location.pathname.split("/").pop();
-  const navLinks = document.querySelectorAll(".navbar-menu a");
-
-  navLinks.forEach((link) => {
-    const linkPage = link.getAttribute("href");
-    if (linkPage === currentPage) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
-  });
+// Navbar transparan saat di atas, gelap saat scroll
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.style.background = "rgba(20, 12, 5, 0.92)";
+  } else {
+    navbar.style.background = "transparent";
+  }
 });
