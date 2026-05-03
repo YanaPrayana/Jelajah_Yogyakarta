@@ -1,10 +1,8 @@
 /* =====================================================
-   FILE: home.css (KHUSUS GHAFFAN)
-   Hanya untuk halaman index, about, contact.
-   Tidak mengubah navbar/footer milik bersama.
+   FILE: home.css (KHUSUS GHAFFAN) - FIXED
    ===================================================== */
 
-/* --- Hero untuk halaman beranda (tidak pakai hero-budaya dari style.css) --- */
+/* Hero untuk halaman beranda */
 .hero-ghaffan {
     position: relative;
     min-height: 90vh;
@@ -12,8 +10,8 @@
     align-items: center;
     text-align: center;
     color: white;
-    background-image: url('../assets-gambar/Photo\ Storage.jpeg');
-    margin-top: 70px; /* Menghindari navbar fixed */
+    background: url('../assets-gambar/photo-home.png') center/cover no-repeat;
+    margin-top: 70px;
 }
 
 .hero-overlay-ghaffan {
@@ -64,7 +62,7 @@
     flex-wrap: wrap;
 }
 
-/* --- Page header (untuk about & contact) --- */
+/* Page header (about & contact) */
 .page-header-ghaffan {
     background: var(--primary);
     color: white;
@@ -78,7 +76,7 @@
     margin: 0;
 }
 
-/* --- About content --- */
+/* About content */
 .about-content-ghaffan {
     padding: 3rem 0;
 }
@@ -94,7 +92,7 @@
     list-style: square;
 }
 
-/* --- Contact form --- */
+/* Contact form */
 .contact-section-ghaffan {
     padding: 3rem 0;
 }
@@ -140,7 +138,7 @@
     margin-bottom: 1rem;
 }
 
-/* --- Responsif untuk hp --- */
+/* Responsif hp */
 @media (max-width: 768px) {
     .hero-ghaffan {
         min-height: 80vh;
@@ -165,4 +163,66 @@
     .page-header-ghaffan {
         padding: 5rem 0 2rem;
     }
+
+    /* ========== OVERRIDE NAVBAR UNTUK HALAMAN GHAFFAN ========== */
+/* Default navbar: transparan penuh, tanpa blur */
+.navbar {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Saat discroll (ditambahkan class .scrolled oleh JS) */
+.navbar.scrolled {
+    background: rgba(20, 12, 5, 0.9) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Pastikan logo dan menu tetap terbaca saat transparan */
+.navbar .logo-nama,
+.navbar .logo-tagline,
+.navbar-menu a {
+    transition: color 0.3s ease;
+}
+
+/* Saat transparan, teks menu tetap putih */
+.navbar:not(.scrolled) .navbar-menu a {
+    color: white;
+}
+
+.navbar:not(.scrolled) .logo-nama {
+    color: var(--accent);
+}
+
+/* Tombol booking saat transparan */
+.navbar:not(.scrolled) .btn-booking {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+/* ========== OVERRIDE NAVBAR KHUSUS HALAMAN GHAFFAN ========== */
+/* Biar transparan saat di atas */
+.navbar {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Saat discroll (ada class .scrolled) menjadi solid gelap */
+.navbar.scrolled {
+  background: rgba(20, 12, 5, 0.9) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Pastikan teks menu tetap terbaca saat transparan */
+.navbar:not(.scrolled) .navbar-menu a {
+  color: white;
+}
+.navbar:not(.scrolled) .logo-nama {
+  color: var(--accent);
+}
+.navbar:not(.scrolled) .btn-booking {
+  background: var(--accent);
+  color: var(--primary);
+}
 }
