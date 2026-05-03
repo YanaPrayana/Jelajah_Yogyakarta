@@ -1,0 +1,168 @@
+/* ========== HOME.CSS (KHUSUS GHAFFAN) - GRADASI BAWAH KE ATAS ========== */
+
+.hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: url('https://images.pexels.com/photos/2372720/pexels-photo-2372720.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+}
+
+/* Overlay gradasi dari bawah ke atas (bawah hitam/gelap, atas transparan) */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 100%);
+    /* Bawah lebih gelap, atas transparan */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.salam {
+    font-size: 1.5rem;
+    font-style: italic;
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 6px 24px;
+    border-radius: 40px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* Judul kreatif (2 baris) */
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ========== PAGE HEADER (about & contact) ========== */
+.page-header {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 6rem 0 3rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+}
+
+/* ========== ABOUT ========== */
+.about-content {
+    padding: 3rem 0;
+}
+
+.about-content h2 {
+    color: var(--primary);
+    margin: 2rem 0 0.8rem;
+    font-size: 1.8rem;
+}
+
+.about-content ul {
+    margin-left: 2rem;
+    list-style: square;
+}
+
+/* ========== CONTACT ========== */
+.contact-section {
+    padding: 3rem 0;
+}
+
+.contact-section .container {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    flex: 1;
+    background: rgb(231, 165, 73);
+    padding: 2rem;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.contact-form label {
+    display: block;
+    margin: 1rem 0 0.4rem;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-family: inherit;
+}
+
+.contact-info {
+    flex: 0.8;
+    background: #eeb053;
+    padding: 2rem;
+    border-radius: 24px;
+}
+
+.contact-info h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    margin: 0.8rem 0;
+}
+
+/* ========== RESPONSIF ========== */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 80vh;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .salam {
+        font-size: 1.2rem;
+    }
+    .contact-section .container {
+        flex-direction: column;
+    }
+    .page-header {
+        padding: 5rem 0 2rem;
+    }
+}
