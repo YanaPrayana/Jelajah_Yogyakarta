@@ -176,10 +176,10 @@ ul {
 /* ================================================
    HERO BUDAYA
    ================================================ */
-.hero-budaya {
+.hero-section {
   position: relative;
   height: 100vh;
-  background-image: url("../assets-gambar/bangunan_hero_section.png");
+  background-image: url(../assets-gambar/photo-home.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

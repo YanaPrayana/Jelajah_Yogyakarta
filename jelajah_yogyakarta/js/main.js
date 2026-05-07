@@ -1,15 +1,29 @@
-// Hamburger Menu
-function toggleMenu() {
-  const menu = document.getElementById("navMenu");
-  menu.classList.toggle("open");
-}
+// ==============================
+// NAVBAR SCROLL EFFECT
+// ==============================
 
-// Navbar transparan saat di atas, gelap saat scroll
 window.addEventListener("scroll", function () {
-  const navbar = document.querySelector(".navbar");
+  const navbar = document.querySelector(".custom-navbar");
+
   if (window.scrollY > 50) {
-    navbar.style.background = "rgba(20, 12, 5, 0.92)";
+    navbar.style.background = "#111111";
   } else {
-    navbar.style.background = "transparent";
+    navbar.style.background = "rgba(15, 15, 15, 0.9)";
+  }
+});
+
+// ==============================
+// ACTIVE NAVBAR
+// ==============================
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach((link) => {
+  const linkPage = link.getAttribute("href");
+
+  if (linkPage === currentPage) {
+    link.classList.add("active");
   }
 });

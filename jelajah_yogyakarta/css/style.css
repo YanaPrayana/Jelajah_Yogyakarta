@@ -1,33 +1,7 @@
-/* ================================================
-   JELAJAH YOGYAKARTA - style.css
-   Semua CSS ada di sini, jangan taruh CSS di HTML!
-   ================================================ */
+/* ============================= */
+/* GLOBAL */
+/* ============================= */
 
-/* --- Google Fonts --- */
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap");
-
-/* --- CSS Variables --- */
-:root {
-  --primary: #7b4f2e;
-  --accent: #c9a84c;
-  --bg: #f5efe6;
-  --secondary: #3d6b4f;
-  --white: #ffffff;
-  --dark: #1a1a1a;
-  --gray: #6b6b6b;
-  --light-gray: #e8e0d5;
-
-  --font-heading: "Playfair Display", serif;
-  --font-body: "Poppins", sans-serif;
-
-  --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  --radius: 10px;
-  --transition: all 0.3s ease;
-}
-
-/* ================================================
-   RESET & BASE
-   ================================================ */
 * {
   margin: 0;
   padding: 0;
@@ -35,805 +9,91 @@
 }
 
 body {
-  font-family: var(--font-body);
-  background-color: var(--bg);
-  color: var(--dark);
-  line-height: 1.7;
-  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-  color: var(--primary);
-  line-height: 1.3;
-}
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
 
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: var(--transition);
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-ul {
-  list-style: none;
-}
-
-/* ================================================
-   NAVBAR
-   ================================================ */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  height: 70px;
-  background: rgba(20, 12, 5, 0.85);
+.custom-navbar {
+  background: rgba(15, 15, 15, 0.9);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+  transition: 0.3s ease;
+  padding: 15px 0;
 }
 
-.navbar-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-
-.logo-icon {
-  font-size: 1.8rem;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo-nama {
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--accent);
-  line-height: 1;
-}
-
-.logo-tagline {
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.4;
-}
-
-.navbar-menu {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  list-style: none;
-}
-
-.navbar-menu a {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.88rem;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 5px 0;
-  border-bottom: 2px solid transparent;
-  transition: var(--transition);
-}
-
-.navbar-menu a:hover,
-.navbar-menu a.active {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-}
-
-.btn-booking {
-  background: var(--accent);
-  color: var(--primary) !important;
-  padding: 10px 20px;
-  border-radius: var(--radius);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: var(--transition);
-  white-space: nowrap;
-  border-bottom: none !important;
-}
-
-.btn-booking:hover {
-  background: var(--white);
-  color: var(--primary) !important;
-}
-
-.navbar-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.navbar-toggle span {
-  width: 25px;
-  height: 3px;
-  background: var(--white);
-  border-radius: 3px;
-  transition: var(--transition);
-}
-
-/* ================================================
-   HERO BUDAYA
-   ================================================ */
-.hero-budaya {
-  position: relative;
-  height: 100vh;
-  background-image: url("../assets-gambar/kraton-yogya.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  padding: 0 80px;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(10, 6, 2, 0.75) 40%,
-    rgba(10, 6, 2, 0.15) 100%
-  );
-  z-index: 1;
-}
-
-.hero-konten {
-  position: relative;
-  z-index: 10;
-  max-width: 600px;
-}
-
-.hero-label {
-  display: inline-block;
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  color: var(--accent);
-  font-style: italic;
-  margin-bottom: 16px;
+.navbar-brand {
+  font-size: 1.4rem;
   letter-spacing: 1px;
 }
 
-.hero-konten h1 {
-  font-size: 3.2rem;
-  color: var(--white);
-  line-height: 1.2;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+.nav-link {
+  color: white !important;
+  margin-left: 12px;
+  transition: 0.3s ease;
 }
 
-.hero-konten h1 span {
-  color: var(--accent);
+.nav-link:hover {
+  color: #ffc107 !important;
 }
 
-.hero-konten p {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.88);
-  line-height: 1.8;
-  margin-bottom: 32px;
-  max-width: 480px;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+.nav-link.active {
+  color: #ffc107 !important;
 }
 
-.btn-jelajahi {
-  display: inline-block;
-  background: transparent;
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  padding: 12px 28px;
-  border-radius: var(--radius);
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: var(--transition);
+/* ============================= */
+/* MAIN CONTENT */
+/* ============================= */
+
+.main-content {
+  min-height: 100vh;
+  padding-top: 100px;
 }
 
-.btn-jelajahi:hover {
-  background: var(--accent);
-  color: var(--primary);
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.footer-section {
+  background-color: #111111;
 }
 
-/* ================================================
-   FILTER KATEGORI
-   ================================================ */
-.filter-kategori {
-  background: var(--white);
-  padding: 40px 0;
-  border-bottom: 1px solid var(--light-gray);
-}
-
-.filter-kategori .container {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-}
-
-.filter-judul h2 {
-  font-size: 1.3rem;
-  color: var(--primary);
-  margin-bottom: 6px;
-}
-
-.filter-judul p {
-  font-size: 0.82rem;
-  color: var(--gray);
-  max-width: 160px;
-  line-height: 1.5;
-}
-
-.filter-grid {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  flex: 1;
-}
-
-.filter-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 20px;
-  border-radius: var(--radius);
-  border: 1.5px solid var(--light-gray);
-  background: var(--bg);
-  cursor: pointer;
-  transition: var(--transition);
-  min-width: 80px;
-}
-
-.filter-item:hover,
-.filter-item.active {
-  background: var(--primary);
-  border-color: var(--primary);
-}
-
-.filter-item span:first-child {
-  font-size: 1.6rem;
-}
-
-.filter-item span:last-child {
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--dark);
-}
-
-.filter-item:hover span:last-child,
-.filter-item.active span:last-child {
-  color: var(--white);
-}
-
-/* ================================================
-   CERITA BUDAYA - Card dengan foto besar
-   ================================================ */
-.cerita-budaya {
-  padding: 60px 0;
-  background: var(--bg);
-}
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 30px;
-}
-
-.section-header h2 {
-  font-size: 1.8rem;
-  color: var(--primary);
-  margin-bottom: 4px;
-}
-
-.section-header p {
-  font-size: 0.88rem;
-  color: var(--gray);
-}
-
-.section-header a {
-  font-size: 0.88rem;
-  color: var(--accent);
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.section-header a:hover {
-  color: var(--primary);
-}
-
-.budaya-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.budaya-card {
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-  height: 340px;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-}
-
-.budaya-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
-}
-
-.budaya-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.budaya-card:hover img {
-  transform: scale(1.05);
-}
-
-.budaya-card-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(10, 6, 2, 0.85) 0%,
-    rgba(10, 6, 2, 0.2) 50%,
-    transparent 100%
-  );
-}
-
-.budaya-card-body {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 24px;
-  z-index: 2;
-}
-
-.budaya-card-tag {
-  display: inline-block;
-  background: var(--accent);
-  color: var(--primary);
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 3px 10px;
-  border-radius: 20px;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.budaya-card-body h3 {
-  font-size: 1.15rem;
-  color: var(--white);
-  margin-bottom: 8px;
-  line-height: 1.3;
-}
-
-.budaya-card-body p {
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.5;
-  margin-bottom: 12px;
-}
-
-.budaya-card-body a {
-  font-size: 0.82rem;
-  color: var(--accent);
-  font-weight: 600;
-}
-
-.budaya-card-body a:hover {
-  color: var(--white);
-}
-
-/* ================================================
-   RASAKAN LANGSUNG - Open Trip
-   ================================================ */
-.rasakan-budaya {
-  background: var(--white);
-  padding: 60px 0;
-}
-
-.rasakan-grid {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 24px;
-  align-items: start;
-}
-
-.trip-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-
-.trip-card {
-  background: var(--bg);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-}
-
-.trip-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.trip-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.trip-card-body {
-  padding: 14px;
-}
-
-.trip-tag {
-  display: inline-block;
-  background: var(--secondary);
-  color: var(--white);
-  font-size: 0.7rem;
-  padding: 2px 8px;
-  border-radius: 20px;
-  margin-bottom: 6px;
-}
-
-.trip-card-body h4 {
-  font-size: 0.9rem;
-  color: var(--primary);
-  margin-bottom: 8px;
-  line-height: 1.3;
-}
-
-.trip-meta {
-  font-size: 0.78rem;
-  color: var(--gray);
-  margin-bottom: 4px;
-}
-
-.trip-harga {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--primary);
+.footer-links li {
   margin-bottom: 10px;
-}
-
-.trip-card-body .btn {
-  width: 100%;
-  text-align: center;
-  padding: 8px;
-  font-size: 0.82rem;
-}
-
-.quote-box {
-  background: var(--primary);
-  border-radius: var(--radius);
-  padding: 32px 24px;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.quote-mark {
-  font-size: 3rem;
-  color: var(--accent);
-  line-height: 1;
-  margin-bottom: 16px;
-  font-family: var(--font-heading);
-}
-
-.quote-box p {
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  color: var(--white);
-  line-height: 1.7;
-  font-style: italic;
-}
-
-/* ================================================
-   NEWSLETTER
-   ================================================ */
-.newsletter {
-  background: var(--bg);
-  border-top: 1px solid var(--light-gray);
-  padding: 32px 0;
-}
-
-.newsletter .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.newsletter-text {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.newsletter-text span {
-  font-size: 2rem;
-}
-
-.newsletter-text h4 {
-  font-size: 1rem;
-  color: var(--primary);
-  margin-bottom: 2px;
-}
-
-.newsletter-text p {
-  font-size: 0.82rem;
-  color: var(--gray);
-}
-
-.newsletter-form {
-  display: flex;
-  gap: 10px;
-}
-
-.newsletter-form input {
-  padding: 10px 16px;
-  border: 1.5px solid var(--light-gray);
-  border-radius: var(--radius);
-  font-family: var(--font-body);
-  font-size: 0.88rem;
-  width: 260px;
-  background: var(--white);
-}
-
-.newsletter-form input:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-/* ================================================
-   FOOTER
-   ================================================ */
-.footer {
-  background-color: var(--primary);
-  color: var(--white);
-  padding: 50px 40px 20px;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
-.footer-brand h3 {
-  font-family: var(--font-heading);
-  color: var(--accent);
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.footer-brand p {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
-
-.footer-sosmed {
-  display: flex;
-  gap: 10px;
-}
-
-.footer-sosmed a {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-  transition: var(--transition);
-}
-
-.footer-sosmed a:hover {
-  background: var(--accent);
-}
-
-.footer-links h4 {
-  color: var(--accent);
-  font-family: var(--font-heading);
-  margin-bottom: 16px;
-  font-size: 1rem;
-}
-
-.footer-links ul {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.85rem;
-  transition: var(--transition);
+  color: #dddddd;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: var(--accent);
-  padding-left: 4px;
+  color: #ffc107;
 }
 
-.footer-kontak p {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 8px;
-}
+/* ============================= */
+/* BUTTON */
+/* ============================= */
 
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-top: 20px;
-  text-align: center;
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-/* ================================================
-   BUTTONS UMUM
-   ================================================ */
-.btn {
-  display: inline-block;
-  padding: 10px 24px;
-  border-radius: var(--radius);
-  font-family: var(--font-body);
-  font-size: 0.9rem;
+.btn-warning {
   font-weight: 600;
-  cursor: pointer;
-  border: none;
-  transition: var(--transition);
-  text-decoration: none;
 }
 
-.btn-primary {
-  background-color: var(--accent);
-  color: var(--primary);
-}
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
 
-.btn-primary:hover {
-  background-color: var(--primary);
-  color: var(--white);
-}
-
-.btn-secondary {
-  background-color: transparent;
-  border: 2px solid var(--accent);
-  color: var(--accent);
-}
-
-.btn-secondary:hover {
-  background-color: var(--accent);
-  color: var(--primary);
-}
-
-/* ================================================
-   CONTAINER & SECTION UMUM
-   ================================================ */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.section {
-  padding: 60px 0;
-}
-
-.section-title {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  color: var(--primary);
-  margin-bottom: 10px;
-}
-
-.section-subtitle {
-  font-size: 0.95rem;
-  color: var(--gray);
-  margin-bottom: 40px;
-}
-
-/* ================================================
-   RESPONSIVE MOBILE
-   ================================================ */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 0 20px;
+  .navbar-nav {
+    margin-top: 15px;
   }
 
-  .navbar-menu {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: rgba(20, 12, 5, 0.97);
-    padding: 24px 20px;
-    gap: 16px;
-  }
-
-  .navbar-menu.open {
-    display: flex;
-  }
-  .navbar-toggle {
-    display: flex;
-  }
-  .btn-booking {
-    display: none;
-  }
-
-  .hero-budaya {
-    padding: 0 24px;
-    background-attachment: scroll;
-  }
-
-  .hero-konten h1 {
-    font-size: 2rem;
-  }
-
-  .filter-kategori .container {
-    flex-direction: column;
-  }
-  .budaya-grid {
-    grid-template-columns: 1fr;
-  }
-  .rasakan-grid {
-    grid-template-columns: 1fr;
-  }
-  .trip-list {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-
-  .newsletter .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .newsletter-form {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .newsletter-form input {
-    width: 100%;
+  .nav-link {
+    margin-left: 0;
+    margin-bottom: 10px;
   }
 }

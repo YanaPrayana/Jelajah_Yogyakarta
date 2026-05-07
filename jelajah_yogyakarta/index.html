@@ -3,86 +3,157 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jelajah Yogyakarta - Jiwa Budaya</title>
+
+    <!-- TITLE -->
+    <title>Jelajah Yogyakarta</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Bersama -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- CSS KHUSUS HALAMAN -->
+    <!-- Ganti sesuai kebutuhan -->
+    <!-- contoh:
     <link rel="stylesheet" href="css/home.css" />
+    -->
   </head>
+
   <body>
-    <!-- Navbar (sudah dari style.css, struktur berikut) -->
-    <nav class="navbar">
-      <div class="navbar-logo">
-        <span class="logo-icon">🏯</span>
-        <div class="logo-text">
-          <span class="logo-nama">Jelajah Yogyakarta</span>
-          <span class="logo-tagline">Open Trip & Budaya</span>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+      <div class="container">
+        <!-- LOGO -->
+        <a class="navbar-brand fw-bold" href="index.html"> Jelajah Jogja </a>
+
+        <!-- TOGGLER -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- MENU -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="wisata.html"> Wisata </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="open-trip.html"> Open Trip </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="budaya.html"> Budaya </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="artikel.html"> Artikel </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"> About </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"> Contact </a>
+            </li>
+
+            <!-- BUTTON LOGIN -->
+            <li class="nav-item ms-lg-3">
+              <a href="login.html" class="btn btn-warning rounded-pill px-4">
+                Login
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-      <ul class="navbar-menu">
-        <li><a href="index.html" class="active">Beranda</a></li>
-        <li><a href="open-trip.html">Open Trip</a></li>
-        <li><a href="destinasi.html">Destinasi</a></li>
-        <li><a href="budaya.html">Budaya</a></li>
-        <li><a href="about.html">Tentang Kami</a></li>
-        <li><a href="contact.html">Kontak</a></li>
-      </ul>
-      <a href="booking.html" class="btn-booking">Booking Open Trip</a>
-      <div class="navbar-toggle"><span></span><span></span><span></span></div>
     </nav>
 
-    <!-- Hero Section (kustom untuk Ghaffan, tidak konflik dengan style.css) -->
-    <section class="hero-ghaffan">
-      <div class="hero-overlay-ghaffan"></div>
-      <div class="container hero-content-ghaffan">
-        <!-- <span class="salam-ghaffan">Sugeng Rawuh</span>  dihapus -->
-        <h1>Yogyakarta<br />Harmoni Rasa, Jiwa, dan Tradisi</h1>
-        <p>
-          Jelajahi setiap sudut yang menyimpan cerita, nilai luhur, dan warisan
-          tak ternilai. Bukan sekadar tempat, Yogyakarta adalah pengalaman yang
-          meresap dalam kalbu.
-        </p>
-        <div class="hero-buttons-ghaffan">
-          <a href="budaya.html" class="btn btn-primary">Jelajahi Budaya !</a>
-          <a href="booking.html" class="btn btn-secondary">Booking Open Trip</a>
-        </div>
-      </div>
-    </section>
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content">
+      <!--
+            TEMPAT ISI HALAMAN MASING-MASING
+            ANGGOTA MULAI CODING DI SINI
+        -->
+    </main>
 
-    <!-- Footer (dari style.css) -->
-    <footer class="footer">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3>Jelajah Yogyakarta</h3>
-          <p>Open Trip & Budaya</p>
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer-section text-white py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- BRAND -->
+          <div class="col-lg-4">
+            <h4 class="fw-bold">Jelajah Yogyakarta</h4>
+
+            <p class="mt-3">
+              Website wisata, budaya, dan open trip untuk menjelajahi keindahan
+              Yogyakarta.
+            </p>
+          </div>
+
+          <!-- NAVIGATION -->
+          <div class="col-lg-4">
+            <h5 class="fw-semibold mb-3">Navigation</h5>
+
+            <ul class="list-unstyled footer-links">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+
+              <li>
+                <a href="wisata.html">Wisata</a>
+              </li>
+
+              <li>
+                <a href="open-trip.html">Open Trip</a>
+              </li>
+
+              <li>
+                <a href="budaya.html">Budaya</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CONTACT -->
+          <div class="col-lg-4">
+            <h5 class="fw-semibold mb-3">Contact</h5>
+
+            <p>Email: jelajahjogja@gmail.com</p>
+            <p>Instagram: @jelajahjogja</p>
+            <p>Yogyakarta, Indonesia</p>
+          </div>
         </div>
-        <div class="footer-links">
-          <h4>Tautan</h4>
-          <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="open-trip.html">Open Trip</a></li>
-            <li><a href="destinasi.html">Destinasi</a></li>
-            <li><a href="budaya.html">Budaya</a></li>
-          </ul>
+
+        <hr class="my-4 border-light" />
+
+        <div class="text-center">
+          <p class="mb-0">© 2026 Jelajah Yogyakarta. All Rights Reserved.</p>
         </div>
-        <div class="footer-links">
-          <h4>Informasi</h4>
-          <ul>
-            <li><a href="about.html">Tentang Kami</a></li>
-            <li><a href="contact.html">Kontak</a></li>
-          </ul>
-        </div>
-        <div class="footer-kontak">
-          <h4>Kontak</h4>
-          <p>📞 +62 812 3456 7890</p>
-          <p>📧 info@jelajahjogja.com</p>
-          <p>📍 Yogyakarta</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        &copy; 2026 Final Project - Jelajah Yogyakarta - Open Trip & Budaya
       </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Bersama -->
     <script src="js/main.js"></script>
+
+    <!-- JS KHUSUS HALAMAN -->
+    <!-- contoh:
     <script src="js/home.js"></script>
+    -->
   </body>
 </html>
