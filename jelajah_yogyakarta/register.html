@@ -17,10 +17,7 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- CSS KHUSUS HALAMAN -->
-    <!-- Ganti sesuai kebutuhan -->
-    <!-- contoh:
-    <link rel="stylesheet" href="css/home.css" />
-    -->
+    <link rel="stylesheet" href="css/register.css" />
   </head>
 
   <body>
@@ -84,10 +81,38 @@
 
     <!-- ================= MAIN CONTENT ================= -->
     <main class="main-content">
-      <!--
-            TEMPAT ISI HALAMAN MASING-MASING
-            ANGGOTA MULAI CODING DI SINI
-        -->
+      <div class="register-modal-overlay"></div>
+      <div class="register-container" id="registerModal">
+        <button class="close-register-modal" id="closeRegisterModal" aria-label="Tutup">&times;</button>
+        <div class="register-title">Register Customer</div>
+        <form>
+          <div class="mb-2">
+            <label for="name" class="form-label">Nama Lengkap</label>
+            <input type="text" class="form-control" id="name" placeholder="Masukkan nama lengkap" required />
+          </div>
+          <div class="mb-2">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Masukkan email" required />
+          </div>
+          <div class="mb-2">
+            <label for="password" class="form-label">Kata sandi</label>
+            <input type="password" class="form-control" id="password" placeholder="Masukkan kata sandi" required />
+          </div>
+          <div class="mb-3">
+            <label for="confirm-password" class="form-label">Konfirmasi Kata sandi</label>
+            <input type="password" class="form-control" id="confirm-password" placeholder="Konfirmasi kata sandi" required />
+          </div>
+          <button type="submit" class="btn-register">Daftar</button>
+        </form>
+        <div class="or-divider">- OR -</div>
+        <button class="btn-google">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" width="22" height="22" style="margin-right: 8px;" />
+          Daftar dengan Google
+        </button>
+        <div class="login-link">
+          Sudah punya akun? <a href="login.html">Login</a>
+        </div>
+      </div>
     </main>
 
     <!-- ================= FOOTER ================= -->
@@ -152,8 +177,15 @@
     <script src="js/main.js"></script>
 
     <!-- JS KHUSUS HALAMAN -->
-    <!-- contoh:
-    <script src="js/home.js"></script>
-    -->
+    <script>
+      // Disable scroll when modal is open
+      document.body.style.overflow = 'hidden';
+      // Close modal and enable scroll
+      document.getElementById('closeRegisterModal').onclick = function() {
+        document.getElementById('registerModal').style.display = 'none';
+        document.querySelector('.register-modal-overlay').style.display = 'none';
+        document.body.style.overflow = '';
+      };
+    </script>
   </body>
 </html>
