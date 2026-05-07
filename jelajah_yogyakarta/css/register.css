@@ -1,0 +1,157 @@
+/* Overlay untuk modal register */
+.register-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 16, 40, 0.6);
+  z-index: 1000;
+}
+
+/* register.css - Styling for Register Page */
+body {
+  min-height: 100vh;
+  background: transparent !important;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  display: none;
+}
+
+.register-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(10, 20, 50, 0.95);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  z-index: 1100;
+}
+.register-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(10, 20, 50, 0.95);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  z-index: 1100;
+}
+
+/* Tombol close (X) kanan atas */
+.close-register-modal {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1200;
+  transition: color 0.2s;
+}
+.close-register-modal:hover {
+  color: #ffc107;
+}
+
+.register-title {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Times New Roman', serif;
+}
+
+.form-label {
+  color: #fff;
+  font-weight: 500;
+}
+
+.form-control {
+  background: #ffffff;
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.form-control:focus {
+  background: #14204a;
+  color: #fff;
+  border: 1px solid #ffc107;
+  box-shadow: none;
+}
+
+.btn-register {
+  width: 100%;
+  background: #e9edfb;
+  color: #0a1432;
+  font-weight: bold;
+  border-radius: 0.7rem;
+  padding: 0.7rem 0;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  border: none;
+  transition: background 0.2s;
+}
+.btn-register:hover {
+  background: #ffc107;
+  color: #0a1432;
+}
+
+.or-divider {
+  text-align: center;
+  color: #fff;
+  margin: 1rem 0 1rem 0;
+  font-weight: 500;
+}
+
+.btn-google {
+  width: 100%;
+  background: #fff;
+  color: #222;
+  font-weight: 500;
+  border-radius: 0.7rem;
+  padding: 0.7rem 0;
+  font-size: 1.1rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: background 0.2s;
+}
+.btn-google:hover {
+  background: #f1f1f1;
+}
+
+.login-link {
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+.login-link a {
+  color: #ffc107;
+  font-weight: bold;
+  text-decoration: none;
+}
+.login-link a:hover {
+  text-decoration: underline;
+}
